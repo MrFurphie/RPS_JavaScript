@@ -1,7 +1,7 @@
 function play(choice) {
 let pChoice = choice;
 let oChoice = Math.floor(Math.random() * 3 + 1);
-document.getElementById('o-img').src = "";
+document.getElementById('o-img').src = "svg/mystery.svg";
 document.getElementById('result').innerHTML = "?";
 let wins = sessionStorage.getItem("winCount");
 let ties = sessionStorage.getItem("tieCount");
@@ -10,52 +10,52 @@ if (wins == null) {
   wins = 0;
 } else {
   wins = wins;
-};
+}
 if (ties == null) {
   ties = 0;
 } else {
   ties = ties;
-};
+}
 if (losses == null) {
   losses = 0;
 } else {
   losses = losses;
-};
+}
 setTimeout(() => {
   if (oChoice === 1 && pChoice === "rock") {
-    document.getElementById('o-img').src = "svg/rock.svg";
+    document.getElementById('r-img').src = "svg/rock.svg";
     document.getElementById('result').innerHTML = "Tie.";
     ++ties;
   } else if (oChoice === 1 && pChoice === "scissors")  {
-    document.getElementById('o-img').src = "svg/rock.svg";
+    document.getElementById('s-img').src = "svg/rock.svg";
     document.getElementById('result').innerHTML = "You lose.";
     ++losses;
   } else if (oChoice === 1 && pChoice === "paper") {
-    document.getElementById('o-img').src = "svg/rock.svg";
+    document.getElementById('r-img').src = "svg/rock.svg";
     document.getElementById('result').innerHTML = "You win.";
     ++wins;
   } else if (oChoice === 2 && pChoice === "rock")  {
-    document.getElementById('o-img').src = "svg/paper.svg";
+    document.getElementById('p-img').src = "svg/paper.svg";
     document.getElementById('result').innerHTML = "You lose.";
     ++losses;
   } else if (oChoice === 2 && pChoice === "paper")  {
-    document.getElementById('o-img').src = "svg/paper.svg";
+    document.getElementById('p-img').src = "svg/paper.svg";
     document.getElementById('result').innerHTML = "Tie.";
     ++ties;
   } else if (oChoice === 2 && pChoice === "scissors")  {
-    document.getElementById('o-img').src = "svg/paper.svg";
+    document.getElementById('p-img').src = "svg/paper.svg";
     document.getElementById('result').innerHTML = "You win.";
     ++wins;
   } else if (oChoice === 3 && pChoice === "rock")  {
-    document.getElementById('o-img').src = "svg/scissors.svg";
+    document.getElementById('s-img').src = "svg/scissors.svg";
     document.getElementById('result').innerHTML = "You win.";
     ++wins;
   } else if (oChoice === 3 && pChoice === "paper")  {
-    document.getElementById('o-img').src = "svg/scissors.svg";
+    document.getElementById('s-img').src = "svg/scissors.svg";
     document.getElementById('result').innerHTML = "You lose.";
     ++losses;
   } else {
-    document.getElementById('o-img').src = "svg/scissors.svg";
+    document.getElementById('s-img').src = "svg/scissors.svg";
     document.getElementById('result').innerHTML = "Tie.";
     ++ties;
   }
@@ -66,7 +66,7 @@ setTimeout(() => {
   document.getElementById('ties').innerHTML = sessionStorage.getItem("tieCount");
   document.getElementById('losses').innerHTML = sessionStorage.getItem("lossCount");
 }, 200);
-
+}
 function reset() {
   sessionStorage.setItem("winCount", 0);
   sessionStorage.setItem("tieCount", 0);
