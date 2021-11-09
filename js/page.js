@@ -23,39 +23,39 @@ if (losses == null) {
 }
 setTimeout(() => {
   if (oChoice === 1 && pChoice === "rock") {
-    document.getElementById('r-img').src = "svg/rock.svg";
+    document.getElementById('o-img').src = "svg/rock.svg";
     document.getElementById('result').innerHTML = "Tie.";
     ++ties;
   } else if (oChoice === 1 && pChoice === "scissors")  {
-    document.getElementById('s-img').src = "svg/rock.svg";
+    document.getElementById('o-img').src = "svg/rock.svg";
     document.getElementById('result').innerHTML = "You lose.";
     ++losses;
   } else if (oChoice === 1 && pChoice === "paper") {
-    document.getElementById('r-img').src = "svg/rock.svg";
+    document.getElementById('o-img').src = "svg/rock.svg";
     document.getElementById('result').innerHTML = "You win.";
     ++wins;
   } else if (oChoice === 2 && pChoice === "rock")  {
-    document.getElementById('p-img').src = "svg/paper.svg";
+    document.getElementById('o-img').src = "svg/paper.svg";
     document.getElementById('result').innerHTML = "You lose.";
     ++losses;
   } else if (oChoice === 2 && pChoice === "paper")  {
-    document.getElementById('p-img').src = "svg/paper.svg";
+    document.getElementById('o-img').src = "svg/paper.svg";
     document.getElementById('result').innerHTML = "Tie.";
     ++ties;
   } else if (oChoice === 2 && pChoice === "scissors")  {
-    document.getElementById('p-img').src = "svg/paper.svg";
+    document.getElementById('o-img').src = "svg/paper.svg";
     document.getElementById('result').innerHTML = "You win.";
     ++wins;
   } else if (oChoice === 3 && pChoice === "rock")  {
-    document.getElementById('s-img').src = "svg/scissors.svg";
+    document.getElementById('o-img').src = "svg/scissors.svg";
     document.getElementById('result').innerHTML = "You win.";
     ++wins;
   } else if (oChoice === 3 && pChoice === "paper")  {
-    document.getElementById('s-img').src = "svg/scissors.svg";
+    document.getElementById('o-img').src = "svg/scissors.svg";
     document.getElementById('result').innerHTML = "You lose.";
     ++losses;
   } else {
-    document.getElementById('s-img').src = "svg/scissors.svg";
+    document.getElementById('o-img').src = "svg/scissors.svg";
     document.getElementById('result').innerHTML = "Tie.";
     ++ties;
   }
